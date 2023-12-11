@@ -4,3 +4,4 @@ CMakeCache.txt
 Makefile
 gtest_example
 .vscode
+*.a

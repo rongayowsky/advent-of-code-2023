@@ -145,11 +145,9 @@ class CalibrationDocSolver {
 
     int matchSpelledNumberRightToLeft(std::string &line, int index) {
         // Early exit if char is not an ending character of 1-9
-        // NOTE: there be a bug that is trigger when this optimization is used.
-        // See test SpelledNumberTrickyExampleValidation.
-        // if (ENDING_CHARS.find(line[index]) == std::string::npos) {
-        //     return -1;
-        // }
+        if (ENDING_CHARS.find(line[index]) == std::string::npos) {
+            return -1;
+        }
 
         int saneIndex{index - MAX_WORD_LENGTH + 1};
         int lengthReduction{0};
@@ -158,8 +156,7 @@ class CalibrationDocSolver {
             lengthReduction = index - MAX_WORD_LENGTH + 1;
         }
         return matchSpelledNumber(
-            line.substr(saneIndex, MAX_WORD_LENGTH + 1 + lengthReduction),
-            false);
+            line.substr(saneIndex, MAX_WORD_LENGTH + lengthReduction), false);
     }
 
     int matchSpelledNumber(const std::string subString,
