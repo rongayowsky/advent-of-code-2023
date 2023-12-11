@@ -2,7 +2,8 @@
 
 Please see https://adventofcode.com/ for puzzle descriptions.
 
-To run these solutions, you will need gtest installed on your system among other standard C++ compilation reqs.
+To run these solutions, you will need gtest installed on your system among other standard C++ compilation reqs. Ideally
+a flavour of linux is used. I'm personally using wsl2 with ubuntu 20.
 
 # Acknowledgements
 
