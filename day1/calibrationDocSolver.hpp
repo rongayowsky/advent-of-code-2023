@@ -6,6 +6,10 @@
 #ifndef CALIBRATION_DOC_SOLVER_H
 #define CALIBRATION_DOC_SOLVER_H
 
+/*
+https://adventofcode.com/2023/day/1
+*/
+
 class CalibrationDocParser {
    public:
     CalibrationDocParser(std::string &filepath) : m_filepath(filepath) {
@@ -35,23 +39,6 @@ class CalibrationDocParser {
     std::string m_filepath;
     std::vector<std::string> m_lines;
 };
-
-/*
-now we need to detect spelled numbers as well. can grab handfill of chars in
-buckets of 3, 4, and 5 chunks, optionally reverse the spelling, and check a
-hashmap for the match.
-
-one two three four five six seven eight nine.
-
-early exit condition, only check first letter to see if in list before string
-matching:
-
-starting letters:
-o t f s e n
-
-ending numbers:
-e o r x n t
-*/
 
 class CalibrationDocSolver {
    public:
