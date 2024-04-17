@@ -120,7 +120,7 @@ TEST(CalibrationDocSolverTest, SpelledNumberMapValidation) {
 }
 
 TEST(CalibrationDocSolverTest, FullSumOfCalibrationValues) {
-    std::string filepath = "calibrationDoc.txt";
+    std::string filepath = "input.txt";
     CalibrationDocParser parser{filepath};
     std::vector<std::string> calibrationDoc{parser.getCalibrationLines()};
 
@@ -130,7 +130,7 @@ TEST(CalibrationDocSolverTest, FullSumOfCalibrationValues) {
 }
 
 TEST(CalibrationDocSolverTest, SpelledNumberFullSumOfCalibrationValues) {
-    std::string filepath = "calibrationDoc.txt";
+    std::string filepath = "input.txt";
     CalibrationDocParser parser{filepath};
     std::vector<std::string> calibrationDoc{parser.getCalibrationLines()};
 
